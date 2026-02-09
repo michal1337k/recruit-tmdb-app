@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('series', function (Blueprint $table) {
             $table->id();
+            $table->integer('tmdb_id')->unique();
+            $table->date('first_air_date')->nullable();
+            $table->float('vote_average')->nullable();
+            $table->integer('vote_count')->nullable();
+            $table->float('popularity')->nullable();
+            $table->string('poster_path')->nullable();
+            $table->string('backdrop_path')->nullable();
+            $table->string('original_language', 5)->nullable();
             $table->timestamps();
         });
     }

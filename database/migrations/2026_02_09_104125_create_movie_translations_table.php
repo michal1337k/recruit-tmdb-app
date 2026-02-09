@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('genres', function (Blueprint $table) {
+        Schema::create('movie_translations', function (Blueprint $table) {
             $table->id();
-            $table->integer('tmdb_id')->unique();
+            $table->foreignId('movie_id')->constrained()->cascadeOnDelete();
+            $table->string('locale', 2);
+            $table->string('title');
+            $table->text('overview')->nullable();
+            $table->unique(['movie_id', 'locale']);
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('genres');
+        Schema::dropIfExists('movie_translations');
     }
 };
