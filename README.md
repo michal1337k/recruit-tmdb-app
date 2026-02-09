@@ -16,6 +16,16 @@ Projekt Laravel działający na Dockerze, służący do pobierania danych filmó
    php artisan key:generate
     ```
 
+    Na końcu pliku .env ustaw klucz TMDB:
+   ```bash
+   TMDB_API_KEY=twoj_klucz_api
+    ```
+    
+    Do wygenerowania klucza potrzebne jest założenie darmowego konta na stronie:
+    ```bash
+   https://www.themoviedb.org/settings/api
+    ```
+    
 5. Uruchom Docker:
    ```bash
    docker-compose up -d
