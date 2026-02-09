@@ -6,7 +6,7 @@ Projekt Laravel działający na Dockerze, służący do pobierania danych filmó
 
 1. Sklonuj repo i przejdź do katalogu:
    ```bash
-   git clone https://github.com/michal1337k/recruit-tmdb-app
+   git clone https://github.com/michal1337k/recruit-tmdb-app.git
    cd tmdb-laravel
    ```
 
